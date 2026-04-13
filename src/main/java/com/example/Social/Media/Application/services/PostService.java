@@ -118,6 +118,8 @@ public class PostService {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
+
+
         if (post.getLikedUsers().contains(user)) {
             post.getLikedUsers().remove(user);
             if (post.getLikesCount() > 0) {

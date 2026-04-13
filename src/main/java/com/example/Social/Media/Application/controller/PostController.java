@@ -51,6 +51,7 @@ public class PostController {
                     post.getImage(),
                     post.getPing(),
                     user.getUserId()
+
             );
             return new ResponseEntity<>("post is created " + newPost.getPostId(), HttpStatus.CREATED);
         } catch (RuntimeException e) {

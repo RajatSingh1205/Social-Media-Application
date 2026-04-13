@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
 @Getter
 @Setter
 @Builder
@@ -65,5 +64,11 @@ public class Post {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "club_id")
     private Clubs club;
+
+    @PrePersist
+    public void prePersist() {
+        if (likesCount == null) likesCount = 0L;
+    }
+
 
 }

@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
 public class Clubs {
 
     @Id
@@ -45,7 +46,7 @@ public class Clubs {
     @JoinColumn(name = "owner_id")
     private User owner;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "club_members",
             joinColumns = @JoinColumn(name = "club_id"),

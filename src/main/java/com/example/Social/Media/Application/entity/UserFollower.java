@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Builder
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -39,7 +38,5 @@ public class UserFollower {
     protected void onCreate() {
         createAt =LocalDateTime.now();
     }
-
-
 
 }

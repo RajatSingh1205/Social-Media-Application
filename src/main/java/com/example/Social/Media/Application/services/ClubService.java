@@ -36,6 +36,8 @@ public class ClubService {
 
 
             clubs.setOwner(user);
+            clubs.getAdmins().add(user);
+            clubs.getMembers().add(user);
             clubs.setCreatedAt(LocalDateTime.now());
             clubs.setUpdatedAt(LocalDateTime.now());
 

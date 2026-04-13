@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@Data
 @Getter
 @Setter
 @Builder
@@ -38,6 +37,7 @@ public class User  {
 
     //    password
     @Column(name = "password", nullable = false)
+
     private String password;
 
     //    email
